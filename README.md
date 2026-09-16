@@ -1,69 +1,72 @@
 # Yulia Pak — Portfolio
 
-A plain HTML/CSS/JS site, no build step — built to match the layout of your
-Adobe Portfolio site, ready to host for free on GitHub Pages.
+A copy of the Adobe Portfolio site at yuliajuliapak.myportfolio.com, rebuilt as a
+plain static site for GitHub Pages. The layout, the left menu, the spacing, the
+grayscale-to-color hover on the home tiles, the image grids and all texts come
+from the original pages.
 
-## Putting it online (GitHub Pages)
+## Updating the site on GitHub
 
-1. Create a free account at github.com, if you don't have one yet.
-2. Create a new repository named **exactly** `yourusername.github.io`
-   (replace `yourusername` with your actual GitHub username — this exact
-   name is what makes GitHub turn it into a live website automatically).
-3. On the repository page, click "Add file" → "Upload files", then drag
-   in everything from this folder (keep the `assets` folder structure
-   intact) and commit.
-4. Within a minute or two your site is live at `https://yourusername.github.io`.
-5. Any time you want to update it, upload the changed file(s) again the
-   same way — GitHub Pages rebuilds automatically.
+1. Open the repository in the web editor: go to
+   github.com/yuliajuliapak/yuliajuliapak.github.io and press the `.` key.
+2. Delete the old `assets` folder (right-click → Delete). This removes files
+   from the previous version that are no longer used.
+3. Drag everything from inside this folder into the file panel: all the
+   `.html` files, `README.md` and the new `assets` folder. Replace files if asked.
+4. Source Control icon → type a message → Commit & Push.
 
-## Adding your videos
+## Pages
 
-Open `assets/data/videos.js`. For each project, paste your YouTube video
-ID into `youtubeId`. You get the ID from the share link:
+| File | Original page |
+|---|---|
+| index.html | /work |
+| showreel.html | /showreel |
+| motion-design.html | /motion-design |
+| ai.html | /ai |
+| storyboards.html | /school-of-motion |
+| digital-compositing.html | /digital-compositing |
+| full-pipeline.html | /archive-1 |
+| about.html | /about |
+| contact.html | /contact |
 
-- `https://youtu.be/dQw4w9WgXcQ` → the ID is `dQw4w9WgXcQ`
-- `https://www.youtube.com/watch?v=dQw4w9WgXcQ` → same ID, after `v=`
+## Videos
 
-Leave `youtubeId: ""` empty and that project shows a placeholder card
-instead, so you can keep building the page before every video is ready.
-Add as many entries to each list as you like — the grid grows on its own.
+The videos are still the same Adobe video player embeds used on the
+Adobe Portfolio pages. They depend on Adobe, so if the Adobe Portfolio or
+Creative Cloud account is closed they may stop playing.
 
-## Contact page
+To swap one for YouTube, open the page file, find the `<iframe ... src="https://www-ccv.adobe.io/...">`
+for that video and replace only the `src` value with
+`https://www.youtube.com/embed/VIDEO_ID` (VIDEO_ID is the part after `youtu.be/`
+or after `watch?v=`). Everything else around it can stay as it is.
 
-`contact.html` currently shows the email on your Claude account
-(`yulialia.pak@gmail.com`) and your LinkedIn. If you'd rather show a
-different email, open `contact.html` and replace both places it appears
-(the visible text and the `mailto:` link).
+## Fonts
 
-## Design notes
+The original uses Adelle and Proxima Nova, which are licensed through Adobe
+Fonts. This version ships with the closest free look-alikes, Bitter and
+Figtree, stored in `assets/fonts`, so it needs no account.
 
-- Fonts: Cormorant Garamond (headings/logo) + Inter (body), loaded free
-  from Google Fonts — no license needed.
-- Colors and layout are a close match to your current Adobe Portfolio
-  site: same hero photo treatment, same 2-column work grid, same
-  full-screen hamburger nav.
-- All six category images (Showreel, Motion Design, AI, Storyboards,
-  Digital Compositing, Full Pipeline Projects) and the homepage hero photo
-  were pulled directly from your live Adobe Portfolio site, so nothing
-  needs to be re-uploaded.
-- The site has no contact form (GitHub Pages can't run one without a
-  third-party service) — contact is a direct email link and LinkedIn,
-  per your call.
+If you keep a Creative Cloud plan, you can use the exact fonts: on
+fonts.adobe.com create a Web Project with Adelle (Regular) and Proxima Nova
+(Bold), copy its `<link rel="stylesheet" href="https://use.typekit.net/xxxxxxx.css">`
+line and paste it into the `<head>` of every page. The CSS already asks for
+`adelle` and `proxima-nova` first, so they will take over automatically.
 
-## File structure
+## Contact form
+
+GitHub Pages can't send form emails by itself, so the Submit button opens the
+visitor's email app with the name, email and message already filled in,
+addressed to yulialia.pak@gmail.com (set in `contact.html`, attribute
+`data-mailto`).
+
+## Structure
 
 ```
-index.html                  Home (hero + work grid)
-showreel.html                }
-motion-design.html           }
-ai.html                      }  category pages — each pulls its
-storyboards.html             }  videos from assets/data/videos.js
-digital-compositing.html     }
-full-pipeline.html          }
-about.html                   About page
-contact.html                 Contact page
-assets/css/styles.css        All styling
-assets/js/main.js            Nav menu + video grid rendering
-assets/data/videos.js        Your video list — edit this to add videos
-assets/images/               Hero photo + category tile images
+*.html                 pages
+assets/css/main.css    shared theme styles
+assets/css/<page>.css  per-page styles (from the original site)
+assets/css/fonts.css   font definitions
+assets/js/site.js      mobile menu, image grid sizing, lightbox, contact form
+assets/images/         all images (hero, home tiles, AI, storyboards, about)
+assets/fonts/          Bitter + Figtree
 ```
