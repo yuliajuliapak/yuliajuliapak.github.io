@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yulia Pak — Motion Design &amp; Visual Artist</title>
+<meta name="description" content="Portfolio of Yulia Pak — motion design, digital compositing, storyboards and visual storytelling.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="logo">Yulia Pak</a>
+  <button class="menu-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="nav-overlay">
+  <ul>
+    <li><a href="index.html" class="active">Work</a></li>
+    <li><a href="showreel.html">Showreel</a></li>
+    <li><a href="motion-design.html">Motion Design</a></li>
+    <li><a href="ai.html">AI</a></li>
+    <li><a href="storyboards.html">Storyboards</a></li>
+    <li><a href="digital-compositing.html">Digital Compositing</a></li>
+    <li><a href="full-pipeline.html">Full Pipeline Projects</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <img src="assets/images/hero.jpg" alt="">
+</div>
+
+<div class="work-grid">
+  <a class="work-tile" href="showreel.html">
+    <img src="assets/images/tile-showreel.jpg" alt="Showreel">
+    <span class="tile-label">Showreel</span>
+  </a>
+  <a class="work-tile" href="motion-design.html">
+    <img src="assets/images/tile-motion-design.jpg" alt="Motion Design">
+    <span class="tile-label">Motion Design</span>
+  </a>
+  <a class="work-tile" href="ai.html">
+    <img src="assets/images/tile-ai.jpg" alt="AI">
+    <span class="tile-label">AI</span>
+  </a>
+  <a class="work-tile" href="storyboards.html">
+    <img src="assets/images/tile-storyboards.jpg" alt="Storyboards">
+    <span class="tile-label">Storyboards</span>
+  </a>
+  <a class="work-tile" href="digital-compositing.html">
+    <img src="assets/images/tile-digital-compositing.jpg" alt="Digital Compositing">
+    <span class="tile-label">Digital Compositing</span>
+  </a>
+  <a class="work-tile" href="full-pipeline.html">
+    <img src="assets/images/tile-full-pipeline.jpg" alt="Full Pipeline Projects">
+    <span class="tile-label">Full Pipeline Projects</span>
+  </a>
+</div>
+
+<footer class="site-footer">
+  &copy; <span id="year"></span> Yulia Pak
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

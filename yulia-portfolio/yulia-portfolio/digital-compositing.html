@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yulia Pak — Digital Compositing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="logo">Yulia Pak</a>
+  <button class="menu-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="nav-overlay">
+  <ul>
+    <li><a href="index.html">Work</a></li>
+    <li><a href="showreel.html">Showreel</a></li>
+    <li><a href="motion-design.html">Motion Design</a></li>
+    <li><a href="ai.html">AI</a></li>
+    <li><a href="storyboards.html">Storyboards</a></li>
+    <li><a href="digital-compositing.html" class="active">Digital Compositing</a></li>
+    <li><a href="full-pipeline.html">Full Pipeline Projects</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+  <div class="page-header">
+    <h1>Digital Compositing</h1>
+  </div>
+
+  <div id="video-grid" class="video-grid"></div>
+
+  <a href="#" class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">&uarr; Back to top</a>
+</div>
+
+<footer class="site-footer">
+  &copy; <span id="year"></span> Yulia Pak
+</footer>
+
+<script src="assets/data/videos.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  renderVideoGrid('video-grid', VIDEOS['digital-compositing']);
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
