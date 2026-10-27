@@ -108,28 +108,40 @@
     function srcOf(el) {
       return el.getAttribute('data-full') || el.getAttribute('data-src') || (el.querySelector('img') || {}).src;
     }
+    // each gallery (project module) is its own set: next/prev never jump to another gallery
+    function groupOf(el) { return el.closest('.project-module') || el.parentNode; }
+    function neighbours(i) {
+      var g = groupOf(links[i]);
+      return links.map(function (l, idx) { return groupOf(l) === g ? idx : -1; }).filter(function (x) { return x >= 0; });
+    }
     function show(i) {
-      current = (i + links.length) % links.length;
-      imgEl.src = srcOf(links[current]);
+      current = i;
+      var set = neighbours(i), pos = set.indexOf(i);
+      imgEl.src = srcOf(links[i]);
+      box.querySelector('.pf-prev').style.display = pos > 0 ? '' : 'none';
+      box.querySelector('.pf-next').style.display = pos < set.length - 1 ? '' : 'none';
       box.classList.add('open');
+    }
+    function step(d) {
+      var set = neighbours(current), pos = set.indexOf(current) + d;
+      if (pos < 0) return;
+      if (pos >= set.length) { hide(); return; }   // end of this gallery: zoom back out
+      show(set[pos]);
     }
     function hide() { box.classList.remove('open'); }
     links.forEach(function (el, i) {
       el.addEventListener('click', function (e) { e.preventDefault(); show(i); });
     });
     box.addEventListener('click', function (e) {
-      if (e.target.classList.contains('pf-prev')) { show(current - 1); }
-      else if (e.target.classList.contains('pf-next')) { show(current + 1); }
+      if (e.target.classList.contains('pf-prev')) { step(-1); }
+      else if (e.target.classList.contains('pf-next')) { step(1); }
       else { hide(); }
     });
-    var single = links.length < 2;
-    box.querySelector('.pf-prev').style.display = single ? 'none' : '';
-    box.querySelector('.pf-next').style.display = single ? 'none' : '';
     document.addEventListener('keydown', function (e) {
       if (!box.classList.contains('open')) return;
       if (e.key === 'Escape') hide();
-      if (e.key === 'ArrowLeft') show(current - 1);
-      if (e.key === 'ArrowRight') show(current + 1);
+      if (e.key === 'ArrowLeft') step(-1);
+      if (e.key === 'ArrowRight') step(1);
     });
   }
 

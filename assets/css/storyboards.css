@@ -2988,3 +2988,10 @@ nav .project-title a, nav .page-title a { display: block; }
 .sb-captions div { min-width: 0; font: 13px/1.4 Arial, sans-serif; color: #777; }
 .sb-captions b { color: #222; }
 @media (max-width: 700px) { .sb-row { height: auto !important; flex-wrap: wrap; } .sb-row a { flex: 1 1 45% !important; } .sb-ill { flex-wrap: nowrap; } .sb-block { aspect-ratio: auto; } }
+
+/* whole storyline grids, no cropping of the painted frames */
+.sb-grid { display: grid; gap: 8px; }
+.sb-grid a { display: block; overflow: hidden; background: #efede9; cursor: pointer; }
+.sb-grid a img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+.sb-row.sb-fit { height: auto !important; }
+.sb-row.sb-fit a img { height: 100%; object-fit: fill; }

@@ -2932,3 +2932,5 @@ nav .project-title a, nav .page-title a { display: block; }
 #project-modules .semrush-panel .semrush-title { font-family: "Figtree", Arial, sans-serif; font-weight: 700; font-size: 30px; margin: 0 0 10px; color: #222; }
 #project-modules .semrush-panel .semrush-text { font-family: "Bitter", Georgia, serif; font-size: 16px; line-height: 1.6; max-width: 640px; margin: 0 0 26px; color: #444; }
 #project-modules .semrush-panel .project-module { margin-top: 0 !important; margin-bottom: 10px !important; }
+
+#project-modules .semrush-panel + .project-module { margin-top: 40px; }

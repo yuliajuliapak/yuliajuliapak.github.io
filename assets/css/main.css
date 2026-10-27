@@ -309,3 +309,24 @@ html.lightbox-zoomed #lightbox-img-wrap .lightbox-extra {
   animation-duration: 0.25s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
+
+/* Text modules span the full content width so their edges line up with the images */
+#project-modules > .project-module-text, #project-modules > .project-module-text .module-text { max-width: none !important; width: 100% !important; }
+.sb-caption, .semrush-text { max-width: none !important; }
+.ai-intro .rich-text > div + div { margin-top: .8em !important; }
+.ai-intro { margin: 0 0 28px !important; }
+.ai-intro .rich-text > div + div { margin-top: 14px !important; }
+
+/* ---- Unified text system across all pages ---- */
+/* Body and captions: Figtree 16/24 */
+#project-modules .module-text, #project-modules .module-text > div,
+.sb-caption, .semrush-text { font-family: "Figtree", proxima-nova, Arial, sans-serif; font-size: 16px; line-height: 24px; color: #777; }
+.semrush-text { color: #666; margin: 0 0 26px; }
+/* Titles for a group or project */
+.mod-title, .sb-title, .semrush-title { display: block; font-family: "Figtree", proxima-nova, Arial, sans-serif; font-weight: 700; font-size: 20px; line-height: 28px; color: #222; margin: 0 0 4px; }
+.sb-caption { margin: 0 0 14px; }
+.sb-captions div { font: 14px/20px "Figtree", Arial, sans-serif; color: #777; }
+.sb-captions b { color: #222; font-weight: 700; }
+/* Same spacing under every video / grid before a text block, and after it */
+#project-modules > .project-module-text { margin: 18px 0 56px !important; padding: 0 !important; }
+#project-modules .semrush-panel .semrush-title { font-size: 20px !important; margin-bottom: 4px; }
