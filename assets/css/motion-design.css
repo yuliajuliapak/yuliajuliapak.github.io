@@ -867,10 +867,11 @@ nav {
   nav .gallery-title a {
     color: #222222;
     font-family: proxima-nova, 'Figtree', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 11px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    line-height: 13px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
     text-transform: uppercase; }
     nav .gallery-title a:hover {
       color: #999999;
@@ -2921,3 +2922,13 @@ nav .project-title a, nav .page-title a { display: block; }
 .pf-lightbox .pf-close { top: 10px; right: 14px; }
 .pf-lightbox .pf-prev { left: 10px; top: 50%; transform: translateY(-50%); }
 .pf-lightbox .pf-next { right: 10px; top: 50%; transform: translateY(-50%); }
+
+/* Semrush cluster */
+#project-modules .semrush-caption { max-width: 760px; margin: 60px 0 18px; float: none; }
+#project-modules .after-semrush { margin-top: 60px; }
+
+/* Semrush grouped panel */
+#project-modules .semrush-panel { background: #f3f1ee; padding: 34px 30px 30px; margin: 60px 0 0; clear: both; overflow: hidden; }
+#project-modules .semrush-panel .semrush-title { font-family: "Figtree", Arial, sans-serif; font-weight: 700; font-size: 30px; margin: 0 0 10px; color: #222; }
+#project-modules .semrush-panel .semrush-text { font-family: "Bitter", Georgia, serif; font-size: 16px; line-height: 1.6; max-width: 640px; margin: 0 0 26px; color: #444; }
+#project-modules .semrush-panel .project-module { margin-top: 0 !important; margin-bottom: 10px !important; }

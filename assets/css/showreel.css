@@ -867,10 +867,11 @@ nav {
   nav .gallery-title a {
     color: #222222;
     font-family: proxima-nova, 'Figtree', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 11px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    line-height: 13px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
     text-transform: uppercase; }
     nav .gallery-title a:hover {
       color: #999999;
@@ -2921,3 +2922,7 @@ nav .project-title a, nav .page-title a { display: block; }
 .pf-lightbox .pf-close { top: 10px; right: 14px; }
 .pf-lightbox .pf-prev { left: 10px; top: 50%; transform: translateY(-50%); }
 .pf-lightbox .pf-next { right: 10px; top: 50%; transform: translateY(-50%); }
+
+/* Archive label and divider */
+#project-modules .archive-module { width: 100%; max-width: 970px; margin: 90px auto 0 !important; padding: 26px 0 14px !important; border-top: 1px solid #ccc; float: none !important; text-align: center; }
+#project-modules .archive-module .archive-label { text-align: center; font-family: "Figtree", Arial, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; color: #222; }

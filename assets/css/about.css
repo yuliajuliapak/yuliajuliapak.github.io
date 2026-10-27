@@ -867,10 +867,11 @@ nav {
   nav .gallery-title a {
     color: #222222;
     font-family: proxima-nova, 'Figtree', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 11px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    line-height: 13px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
     text-transform: uppercase; }
     nav .gallery-title a:hover {
       color: #999999;

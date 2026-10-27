@@ -867,10 +867,11 @@ nav {
   nav .gallery-title a {
     color: #222222;
     font-family: proxima-nova, 'Figtree', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 11px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    line-height: 13px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
     text-transform: uppercase; }
     nav .gallery-title a:hover {
       color: #999999;
@@ -3029,6 +3030,41 @@ nav .link-title {
       margin-top: 0%; } }
 
 /* ---- additions for the self-hosted version ---- */
+.contact-linkedin-button { margin-top: 30px; }
+.contact-linkedin-button .button-module {
+  border-radius: 100px;
+  color: #ffffff;
+  font-family: arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 40px;
+  text-transform: none;
+  background-color: #222222;
+  border: none; }
+  .contact-linkedin-button .button-module::before, .contact-linkedin-button .button-module::after {
+    width: 30px; }
+  .contact-linkedin-button .button-module:hover {
+    color: #ffffff;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: none;
+    background-color: rgba(34, 34, 34, 0.75); }
+  @media (max-width: 932px) {
+    .contact-linkedin-button .button-module {
+      font-size: 14px;
+      height: 38px;
+      line-height: 38px; }
+      .contact-linkedin-button .button-module::before, .contact-linkedin-button .button-module::after {
+        width: 29px; } }
+  @media (max-width: 540px) {
+    .contact-linkedin-button .button-module {
+      font-size: 14px;
+      height: 35px;
+      line-height: 35px; }
+      .contact-linkedin-button .button-module::before, .contact-linkedin-button .button-module::after {
+        width: 26px; } }
 .lightbox-link { cursor: zoom-in; }
 nav .project-title a, nav .page-title a { display: block; }
 .pf-lightbox { position: fixed; inset: 0; z-index: 100000; background: rgba(255,255,255,0.94);

@@ -795,7 +795,7 @@ main {
   max-width: 100%;
   float: left;
   padding-bottom: 20px;
-  padding-top: 60px;
+  padding-top: 45px;
   width: 100%; }
 
 .logo-text {
@@ -862,15 +862,16 @@ nav {
   float: left;
   max-width: 100%;
   padding-bottom: 0px;
-  padding-top: 40px;
+  padding-top: 34px;
   width: 100%; }
   nav .gallery-title a {
     color: #222222;
     font-family: proxima-nova, 'Figtree', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 11px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    line-height: 13px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
     text-transform: uppercase; }
     nav .gallery-title a:hover {
       color: #999999;
@@ -1745,3 +1746,13 @@ nav .project-title a, nav .page-title a { display: block; }
 .pf-lightbox .pf-close { top: 10px; right: 14px; }
 .pf-lightbox .pf-prev { left: 10px; top: 50%; transform: translateY(-50%); }
 .pf-lightbox .pf-next { right: 10px; top: 50%; transform: translateY(-50%); }
+
+/* home page tagline under the logo */
+.logo-secondary {
+  clear: both;
+  width: 100%;
+  max-width: 215px;
+  color: #777777;
+  font-size: 13px;
+  line-height: 1.5;
+  padding-top: 16px; }
