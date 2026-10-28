@@ -2961,7 +2961,7 @@ nav .project-title a, nav .page-title a { display: block; }
 /* Contact block, option B */
 .about-contact { display: grid; grid-template-columns: 508px 1fr; gap: 0; border-top: 1px solid #ccc; margin: 70px 0 20px; padding-top: 34px; clear: both; }
 .about-contact-label { font-family: "Figtree", Arial, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; color: #222; padding-top: 6px; }
-.about-contact-email { font-family: "Figtree", Arial, sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 6px; }
+.about-contact-email { font-family: "Figtree", Arial, sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 16px; }
 .about-contact-email a { color: #222; text-decoration: none; }
 .about-contact-note { font-size: 15px; color: #999; margin-bottom: 22px; }
 .about-contact .button-container { text-align: left; }

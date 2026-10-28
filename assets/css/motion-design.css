@@ -2934,3 +2934,7 @@ nav .project-title a, nav .page-title a { display: block; }
 #project-modules .semrush-panel .project-module { margin-top: 0 !important; margin-bottom: 10px !important; }
 
 #project-modules .semrush-panel + .project-module { margin-top: 40px; }
+
+/* videos sit a little dimmed and light up to full colour on hover */
+#project-modules .embed-content { transition: filter .3s ease; }
+#project-modules .embed-content:hover { filter: brightness(1.2) saturate(1.3); }
