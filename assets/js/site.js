@@ -167,4 +167,12 @@
     if (submit) submit.addEventListener('click', send);
     form.addEventListener('submit', function (e) { e.preventDefault(); send(); });
   });
+
+  // ---- Videos: once a visitor clicks play, keep the video in full colour even after the mouse leaves ----
+  window.addEventListener('blur', function () {
+    setTimeout(function () {
+      var a = document.activeElement;
+      if (a && a.tagName === 'IFRAME' && a.parentNode) { a.parentNode.classList.add('is-playing'); }
+    }, 0);
+  });
 })();

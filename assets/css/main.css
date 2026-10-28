@@ -330,3 +330,5 @@ html.lightbox-zoomed #lightbox-img-wrap .lightbox-extra {
 /* Same spacing under every video / grid before a text block, and after it */
 #project-modules > .project-module-text { margin: 18px 0 56px !important; padding: 0 !important; }
 #project-modules .semrush-panel .semrush-title { font-size: 20px !important; margin-bottom: 4px; }
+
+#project-modules > .ai-intro { margin-top: 0 !important; }

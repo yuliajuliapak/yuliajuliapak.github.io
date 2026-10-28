@@ -2931,16 +2931,19 @@ nav .project-title a, nav .page-title a { display: block; }
 #project-modules .semrush-panel { background: #f3f1ee; padding: 34px 30px 30px; margin: 60px 0 0; clear: both; overflow: hidden; }
 #project-modules .semrush-panel .semrush-title { font-family: "Figtree", Arial, sans-serif; font-weight: 700; font-size: 30px; margin: 0 0 10px; color: #222; }
 #project-modules .semrush-panel .semrush-text { font-family: "Bitter", Georgia, serif; font-size: 16px; line-height: 1.6; max-width: 640px; margin: 0 0 26px; color: #444; }
-#project-modules .semrush-panel .project-module { margin-top: 0 !important; margin-bottom: 10px !important; }
+#project-modules .semrush-panel .project-module { margin-top: 0 !important; margin-bottom: var(--video-gap, 24px) !important; }
 
 #project-modules .semrush-panel + .project-module { margin-top: 40px; }
 
 /* YouTube videos sit softly dimmed and show their real colour on hover or while playing */
 #project-modules .embed-aspect-ratio:has(iframe[src*="youtube"])::after { content: ""; position: absolute; inset: 0; background: rgba(120, 120, 120, 0.38); pointer-events: none; transition: opacity .3s ease; }
-#project-modules .embed-aspect-ratio:has(iframe[src*="youtube"]):hover::after { opacity: 0; }
+#project-modules .embed-aspect-ratio:has(iframe[src*="youtube"]):hover::after, #project-modules .embed-aspect-ratio.is-playing::after { opacity: 0; }
 
-/* same 10px spacing between all videos, inside and outside the Semrush panel */
-#project-modules > .project-module-video, #project-modules > .project-module-tree { margin-bottom: 10px !important; padding-bottom: 0 !important; }
-#project-modules .tree-wrapper { gap: 10px; }
-#project-modules .semrush-panel { margin-top: 50px; }
-#project-modules .semrush-panel + .project-module { margin-top: 50px; }
+/* 30px between rows, 18px between side by side videos, same inside and outside the Semrush panel, inside and outside the Semrush panel */
+#project-modules { --video-gap: 30px; --video-col-gap: 18px; }
+#project-modules .project-module-video, #project-modules .project-module-tree { margin-top: 0 !important; margin-bottom: var(--video-gap) !important; padding-top: 0 !important; padding-bottom: 0 !important; }
+#project-modules .tree-wrapper { gap: var(--video-col-gap); }
+#project-modules .tree-child-wrapper > .project-module-video { margin-bottom: 0 !important; }
+#project-modules .semrush-panel .project-module-video:last-child, #project-modules .semrush-panel .project-module-tree:last-child { margin-bottom: 0 !important; }
+#project-modules .semrush-panel { margin-top: 50px; margin-bottom: 50px; }
+#project-modules .tree-child-wrapper { border-left: 0 !important; border-right: 0 !important; }
