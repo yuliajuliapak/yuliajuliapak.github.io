@@ -2926,3 +2926,5 @@ nav .project-title a, nav .page-title a { display: block; }
 /* Archive label and divider */
 #project-modules .archive-module { width: 100%; max-width: 970px; margin: 90px auto 0 !important; padding: 26px 0 14px !important; border-top: 1px solid #ccc; float: none !important; text-align: center; }
 #project-modules .archive-module .archive-label { text-align: center; font-family: "Figtree", Arial, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; color: #222; }
+
+#project-modules .archive-caption { width: 75% !important; max-width: 756px; margin: 18px auto 56px !important; }

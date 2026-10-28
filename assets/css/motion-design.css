@@ -2935,6 +2935,12 @@ nav .project-title a, nav .page-title a { display: block; }
 
 #project-modules .semrush-panel + .project-module { margin-top: 40px; }
 
-/* videos sit a little dimmed and light up to full colour on hover */
-#project-modules .embed-content { transition: filter .3s ease; }
-#project-modules .embed-content:hover { filter: brightness(1.2) saturate(1.3); }
+/* YouTube videos sit softly dimmed and show their real colour on hover or while playing */
+#project-modules .embed-aspect-ratio:has(iframe[src*="youtube"])::after { content: ""; position: absolute; inset: 0; background: rgba(120, 120, 120, 0.38); pointer-events: none; transition: opacity .3s ease; }
+#project-modules .embed-aspect-ratio:has(iframe[src*="youtube"]):hover::after { opacity: 0; }
+
+/* same 10px spacing between all videos, inside and outside the Semrush panel */
+#project-modules > .project-module-video, #project-modules > .project-module-tree { margin-bottom: 10px !important; padding-bottom: 0 !important; }
+#project-modules .tree-wrapper { gap: 10px; }
+#project-modules .semrush-panel { margin-top: 50px; }
+#project-modules .semrush-panel + .project-module { margin-top: 50px; }
