@@ -16,6 +16,15 @@
         person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
     })
 </script>
+<style id="spacing-fixes">
+/* title hierarchy: 56px above a group, 12px between title and content */
+#project-modules > .project-module-text:has(.mod-title){margin:56px 0 12px !important;padding:0 !important}
+#project-modules > .project-module-text:has(.mod-title):first-child{margin-top:18px !important}
+#project-modules > .project-module-text:has(.mod-title) .module-text > div{padding:0 !important}
+#project-modules > .project-module-text:has(.mod-title) .mod-title:last-child{margin-bottom:0 !important}
+.sb-title{margin:0 0 12px !important}
+.sb-title + .sb-caption{margin-top:-6px !important}
+</style>
 </head>
 <body id="top" class="link-transition"> 
 <div class="js-responsive-nav">
@@ -88,13 +97,6 @@
 <div class="page-content js-page-content">
 <div class="js-project-modules modules content" id="project-canvas">
 <div id="project-modules">
-<div class="project-module module video project-module-video js-js-project-module">
-<div class="embed-dimensions" style="max-width: 1920px; max-height: 1080px; margin: 0 auto;">
-<div class="embed-aspect-ratio" style="padding-bottom: 56.25%; position: relative; height: 0px;">
-<iframe allowfullscreen="" class="embed-content" frameborder="0" src="https://www.youtube.com/embed/CS3qDGdIW8k?rel=0" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="Video Player"></iframe>
-</div>
-</div>
-</div>
 <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 0px;
 padding-bottom: px;
   max-width: 800px;
@@ -106,7 +108,7 @@ padding-bottom: px;
 <div class="project-module module video project-module-video js-js-project-module">
 <div class="embed-dimensions" style="max-width: 1920px; max-height: 1080px; margin: 0 auto;">
 <div class="embed-aspect-ratio" style="padding-bottom: 56.25%; position: relative; height: 0px;">
-<iframe allowfullscreen="" class="embed-content" frameborder="0" src="https://www.youtube.com/embed/EcwvWYUOvu4?rel=0" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="Video Player"></iframe>
+<iframe allowfullscreen="" class="embed-content" frameborder="0" src="https://www.youtube.com/embed/CS3qDGdIW8k?rel=0" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="Video Player"></iframe>
 </div>
 </div>
 </div>
@@ -120,7 +122,7 @@ padding-bottom: px;
 <div class="project-module module video project-module-video js-js-project-module">
 <div class="embed-dimensions" style="max-width: 1920px; max-height: 1080px; margin: 0 auto;">
 <div class="embed-aspect-ratio" style="padding-bottom: 56.25%; position: relative; height: 0px;">
-<iframe allowfullscreen="" class="embed-content" frameborder="0" src="https://www.youtube.com/embed/m_YUo2lrx8g?rel=0" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="Video Player"></iframe>
+<iframe allowfullscreen="" class="embed-content" frameborder="0" src="https://www.youtube.com/embed/EcwvWYUOvu4?rel=0" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="Video Player"></iframe>
 </div>
 </div>
 </div>
@@ -134,7 +136,7 @@ padding-bottom: px;
 <div class="project-module module video project-module-video js-js-project-module">
 <div class="embed-dimensions" style="max-width: 1920px; max-height: 1080px; margin: 0 auto;">
 <div class="embed-aspect-ratio" style="padding-bottom: 56.25%; position: relative; height: 0px;">
-<iframe allowfullscreen="" class="embed-content" frameborder="0" src="https://www-ccv.adobe.io/v1/player/ccv/L9KmAkVZLAU/embed?bgcolor=%23191919&amp;lazyLoading=true&amp;api_key=BehancePro2View" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="Video Player"></iframe>
+<iframe allowfullscreen="" class="embed-content" frameborder="0" src="https://www.youtube.com/embed/m_YUo2lrx8g?rel=0" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="Video Player"></iframe>
 </div>
 </div>
 </div>
@@ -145,6 +147,13 @@ padding-bottom: px;
   clear: both;
 ">
 <div class="rich-text js-text-editable module-text"><div style="text-align:left;"><span class="mod-title">It’s here!</span>Collaborative university work with Marja Naponnen and Angela Molino, exploring visual storytelling and mixed techniques.</div></div>
+</div>
+<div class="project-module module video project-module-video js-js-project-module">
+<div class="embed-dimensions" style="max-width: 1920px; max-height: 1080px; margin: 0 auto;">
+<div class="embed-aspect-ratio" style="padding-bottom: 56.25%; position: relative; height: 0px;">
+<iframe allowfullscreen="" class="embed-content" frameborder="0" src="https://www-ccv.adobe.io/v1/player/ccv/L9KmAkVZLAU/embed?bgcolor=%23191919&amp;lazyLoading=true&amp;api_key=BehancePro2View" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="Video Player"></iframe>
+</div>
+</div>
 </div>
 </div>
 </div>
