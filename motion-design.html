@@ -16,6 +16,13 @@
         person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
     })
 </script>
+<style id="spacing-fixes">
+/* title hierarchy: 56px above a group, 12px between title and content */
+#project-modules > .project-module-text:has(.mod-title){margin:56px 0 12px !important;padding:0 !important}
+#project-modules > .project-module-text:has(.mod-title):first-child{margin-top:18px !important}
+.sb-title{margin:0 0 12px !important}
+.sb-title + .sb-caption{margin-top:-6px !important}
+</style>
 </head>
 <body id="top" class="link-transition"> 
 <div class="js-responsive-nav">
@@ -92,7 +99,7 @@
 <div class="rich-text js-text-editable module-text"><div style="text-align:left;"><span class="mod-title">Work in progress: Mesmo</span>A hypnotic chameleon (Mesmo) who is trying very hard to influence whoever is watching. Character design, expressions and puppet rig for a 2D animation. Coming soon.</div></div>
 </div>
 <div class="project-module module image mesmo-image" style="float:none;width:100%;margin:0 0 56px;padding:0;"><img src="mesmo.jpg" alt="Mesmo the chameleon: character design, facial expressions and puppet rig" style="width:100%;display:block;"></div>
-<div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="margin:0 0 12px;padding:0;">
+<div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="margin:56px 0 12px !important;padding:0 !important;">
 <div class="rich-text js-text-editable module-text"><div style="text-align:left;"><span class="mod-title">Moustache breathing loop (sound is coming)</span></div></div>
 </div>
 <div class="project-module module video project-module-video js-js-project-module">
